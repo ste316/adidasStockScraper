@@ -45,6 +45,7 @@ class adidasStockScraper:
                     proxyList.append({'http':'http://'+tempL[2]+tempL[3]+'@'+tempL[0]+':'+tempL[1]}) ; valid_ip+=1 # proxies with auth --> proxies = {"http": "http://user:pass@ip:port/"}
             print('found '+str(valid_ip)+' valid ip')
         else: print('using local ip')
+        return proxyList
 
     def getHeader(self):
         return {
@@ -94,5 +95,4 @@ class adidasStockScraper:
 if __name__ == '__main__':
     main = adidasStockScraper('www.adidas.de', 4)
     main.run()
-
 
